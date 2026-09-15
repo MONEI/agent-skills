@@ -8,7 +8,7 @@ They follow the open [Agent Skills](https://agentskills.io) convention (`SKILL.m
 
 | Skill | What it covers |
 |---|---|
-| [`skills/monei-payments`](./skills/monei-payments/SKILL.md) | The payment leg for any storefront or shopping agent: requirements → connector config → frontend → order/webhook backend → proof. Bizum, cards with 3DS/SCA, Apple Pay, Google Pay, SEPA. Platform specifics live in one adapter file per platform. |
+| [`skills/monei-payments`](./skills/monei-payments/SKILL.md) | The payment leg for any storefront or shopping agent: requirements → connector config → frontend → order/webhook backend → proof. Bizum, cards with 3DS/SCA, Apple Pay, Google Pay, Mbway, SEPA (coming). Platform specifics live in one adapter file per platform. |
 
 ### Platform adapters (`skills/monei-payments/references/platforms/`)
 
