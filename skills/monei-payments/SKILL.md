@@ -1,6 +1,6 @@
 ---
 name: monei-payments
-description: Add the payment leg to any storefront or commerce agent with MONEI — Bizum (native acquiring), cards with 3DS/SCA, Apple Pay, Google Pay and SEPA Direct Debit — through MONEI's platform connectors (commercetools today; Shopify, Medusa, Saleor, Salesforce and WooCommerce adapters to follow) or its REST API. Covers requirements, connector config, Bizum's redirect/RTP flow, webhook reconciliation, test mode, and how a shopping agent (Claude commerce-agents or any MCP/UCP client) hands a cart off to a licensed payment institution and gets a settled, auditable result back. Use whenever a project sells in Spain, mentions Bizum, or needs a Banco de España-licensed PSP behind an agent.
+description: Add the payment leg to any storefront or commerce agent with MONEI — Bizum (native acquiring), cards with 3DS/SCA, Apple Pay, Google Pay and SEPA Direct Debit — through MONEI's platform integrations (commercetools and Shopify today; Medusa, Saleor, Salesforce and WooCommerce adapters to follow) or its REST API. Covers requirements, connector config, Bizum's redirect/RTP flow, webhook reconciliation, test mode, and how a shopping agent (Claude commerce-agents or any MCP/UCP client) hands a cart off to a licensed payment institution and gets a settled, auditable result back. Use whenever a project sells in Spain, mentions Bizum, or needs a Banco de España-licensed PSP behind an agent.
 when_to_use:
   - "Integrating or configuring a MONEI payment connector on any commerce platform (commercetools, Shopify, Medusa, Saleor, Salesforce Commerce Cloud, WooCommerce, PrestaShop) or calling the MONEI API directly"
   - "Accepting Bizum in a storefront, hosted checkout, or custom frontend"
@@ -29,7 +29,7 @@ This skill is **platform-agnostic by design**. The workflow, the Bizum reference
 | Platform | Adapter | Status |
 |---|---|---|
 | commercetools (Connect connector) | [references/platforms/commercetools.md](./references/platforms/commercetools.md) | available |
-| Shopify (MONEI Payments / MONEI Pay · Bizum apps) | `references/platforms/shopify.md` | planned |
+| Shopify (MONEI Onsite, Payments, Bizum, MB WAY, Multibanco apps) | [references/platforms/shopify.md](./references/platforms/shopify.md) | available |
 | Medusa | `references/platforms/medusa.md` | planned |
 | Saleor | `references/platforms/saleor.md` | planned |
 | Salesforce Commerce Cloud | `references/platforms/salesforce.md` | planned |
@@ -119,6 +119,7 @@ Then turn it into one full-flow integration test against the real connector and 
 | Need | Read |
 |---|---|
 | **commercetools**: exact `connect.yaml` keys, scopes, processor routes, enabler bundle, status map, webhook signature, pitfalls | [references/platforms/commercetools.md](./references/platforms/commercetools.md) — written as a sibling of `stripe.md` in `commercetools-integrations` |
+| **Shopify**: which MONEI apps, install/bind, test vs live, order state, `receipt.payment_id` reconciliation, hide-by-country, Shop Pay / UCP in agent checkout | [references/platforms/shopify.md](./references/platforms/shopify.md) |
 | Other platforms | `references/platforms/<platform>.md` as they land; until then the REST API + Hosted Payment Page path in `agentic-checkout.md` |
 | Bizum as a method: flows (redirect vs request-to-pay), limits, refunds, test bands, what "SCA" means for Bizum | [references/bizum.md](./references/bizum.md) |
 | An agent placing the order: the approval gate, MONEI's MCP server, UCP Bizum handler, what to log for the audit trail | [references/agentic-checkout.md](./references/agentic-checkout.md) |
