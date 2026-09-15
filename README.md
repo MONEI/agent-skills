@@ -15,7 +15,7 @@ They follow the open [Agent Skills](https://agentskills.io) convention (`SKILL.m
 | Platform | Status |
 |---|---|
 | commercetools (Connect connector) | ✅ available |
-| Shopify (MONEI Payments · MONEI Pay Bizum apps) | planned |
+| Shopify (MONEI Onsite · Payments · Bizum · MB WAY · Multibanco apps) | ✅ available |
 | Medusa | planned |
 | Saleor | planned |
 | Salesforce Commerce Cloud | planned |
